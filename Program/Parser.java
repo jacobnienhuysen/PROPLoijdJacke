@@ -1,4 +1,4 @@
-package prop.assignment0;
+
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class Parser implements IParser {
 	/**
 	 * Opens a file for parsing.
 	 */
-	void open(String fileName) throws IOException, TokenizerException{
+	public void open(String fileName) throws IOException, TokenizerException{
 		tokenizer.open(fileName);
 	}
 	
@@ -30,13 +30,15 @@ public class Parser implements IParser {
 	/**
 	 * Parses a program from file returning a parse tree (the root node of a parse tree).
 	 */
-	INode parse() throws IOException, TokenizerException, ParserException{
+	public INode parse() throws IOException, TokenizerException, ParserException{
 		
-		return parse
+		return parseText();
 	}
 
 	/**
 	 * Closes the file and releases any system resources associated with it.
 	 */
-	public void close() throws IOException ;
+	public void close() throws IOException{
+		
+	}
 }
